@@ -10,6 +10,12 @@ namespace DPProject.Models
 {
     public class Animal
     {
+        [JsonProperty("allSpecies")]
+        public List<AnimalSpecy> AnimalSpecies { get; set; }
+    }
+
+    public class AnimalSpecy
+    {
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
@@ -28,25 +34,25 @@ namespace DPProject.Models
         [JsonProperty(PropertyName = "habitat")]
         public string Habitat { get; set; }
 
-        public string Image { get; set; }
+        //public string Image { get; set; }
 
-        [JsonExtensionData]
-        private Dictionary<string, JToken> _extraJsonData = new Dictionary<string, JToken>();
+        //[JsonExtensionData]
+        //private Dictionary<string, JToken> _extraJsonData = new Dictionary<string, JToken>();
 
-        [OnDeserialized]
-        private void ProcessExtraJsonData(StreamingContext context)
-        {
-            JToken prefsData = (JToken)_extraJsonData["image"];
-            Image = (string)prefsData.SelectToken("url");
-        }
+        //[OnDeserialized]
+        //private void ProcessExtraJsonData(StreamingContext context)
+        //{
+        //    JToken prefsData = (JToken)_extraJsonData["image"];
+        //    Image = "http://www.bloowatch.org" + (string)prefsData.SelectToken("url");
+        //}
 
-        public ImageSource ImaheSrc
-        {
-            get
-            {
-                return ImageSource.FromStream(() => new HttpClient().GetStreamAsync(Image).Result);
-            }
-        }
+        //public ImageSource ImageSrc
+        //{
+        //    get
+        //    {
+        //        return ImageSource.FromStream(() => new HttpClient().GetStreamAsync(Image).Result);
+        //    }
+        //}
 
 
     }

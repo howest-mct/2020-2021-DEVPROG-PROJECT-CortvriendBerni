@@ -17,7 +17,7 @@ namespace DPProject.Repository
             return client;
         }
 
-        public static async Task<List<Animal>> GetAnimalsAsync()
+        public static async Task<Animal> GetAnimalsAsync()
         {
             string url = "http://www.bloowatch.org/developers/json/species";
             using (HttpClient client = GetHttpClient())
@@ -26,7 +26,7 @@ namespace DPProject.Repository
                 {
                     string json = await client.GetStringAsync(url);
 
-                    List<Animal> animals = JsonConvert.DeserializeObject<List<Animal>>(json);
+                    Animal animals = JsonConvert.DeserializeObject<Animal>(json);
                     return animals;
                 }
 

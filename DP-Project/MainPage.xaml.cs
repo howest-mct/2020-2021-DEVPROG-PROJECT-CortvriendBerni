@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DPProject.Views;
 using Xamarin.Forms;
 
 namespace DP_Project
@@ -13,6 +14,17 @@ namespace DP_Project
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void List_Animals(object sender, EventArgs e)
+        {
+            NavigateToAnimalList();
+
+        }
+
+        private void NavigateToAnimalList()
+        {
+            Navigation.PushAsync(new AnimalList());
         }
     }
 }
