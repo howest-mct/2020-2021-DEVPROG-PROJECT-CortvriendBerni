@@ -16,11 +16,11 @@ namespace DPProject.Views
             ShowAnimals();
         }
 
+
         private async Task ShowAnimals()
         {
             Animal animals = await AnimalRepo.GetAnimalsAsync();
             lvwAnimals.ItemsSource = animals.AnimalSpecies;
-
         }
 
         private async void animalbutton_Clicked(object sender, EventArgs e)

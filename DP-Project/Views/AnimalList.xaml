@@ -10,20 +10,17 @@
     </ContentPage.BackgroundColor>
 
     <StackLayout>
-         <ListView x:Name="lvwAnimals" RowHeight="100" SeparatorVisibility="Default" HasUnevenRows="true" SeparatorColor="#172A3A">
+         <ListView x:Name="lvwAnimals" RowHeight="100" SeparatorVisibility="Default" HasUnevenRows="true" SeparatorColor="#74B3CE">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                            <StackLayout VerticalOptions="CenterAndExpand"> 
-                                <Button x:Name="animalbutton" Clicked="animalbutton_Clicked" StyleId="Button" Text="{Binding Name}" BackgroundColor="#EFFAFF" TextColor="#172A3A" HorizontalOptions="FillAndExpand" Grid.Column="0"/> 
-                                <!--<Label Text="{Binding Image}"/>-->
-                                <Button x:Name="locationbutton" StyleId="Button" Text="{Binding Location}" BackgroundColor="#EFFAFF" TextColor="#172A3A" HorizontalOptions="FillAndExpand" Grid.Column="1"/> 
-                            </StackLayout> 
+                        <StackLayout VerticalOptions="CenterAndExpand" Orientation="Horizontal">
+                            <Button x:Name="animalbutton" Clicked="animalbutton_Clicked" StyleId="Button" Text="{Binding Name}" BackgroundColor="#EFFAFF" TextColor="#172A3A" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
         <Button x:Name="btnNavBack" Text="GO BACK HOME" Clicked="btnNavBack_Clicked" StyleId="BackButton" VerticalOptions="EndAndExpand" BackgroundColor="#172A3A" TextColor="#EFFAFF" Opacity="0.8"/>
     </StackLayout>
 </ContentPage>
