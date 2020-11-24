@@ -34,6 +34,9 @@ namespace DPProject.Models
         [JsonProperty(PropertyName = "habitat")]
         public string Habitat { get; set; }
 
+        [JsonProperty(PropertyName = "image")]
+        public Image Image { get; set; }
+
         //public string Image { get; set; }
 
         //[JsonExtensionData]
@@ -55,5 +58,20 @@ namespace DPProject.Models
         //}
 
 
+    }
+
+    public class Image
+    {
+        [JsonProperty(PropertyName = "url")]
+        public string Url { get; set; }
+            
+
+        public ImageSource ImageSrc
+        {
+            get
+            {
+                return ImageSource.FromStream(() => new HttpClient().GetStreamAsync("http://www.bloowatch.org"+Url).Result);
+            }
+        }
     }
 }

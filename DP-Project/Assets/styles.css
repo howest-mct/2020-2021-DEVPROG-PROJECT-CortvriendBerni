@@ -20,3 +20,17 @@
     border-radius: 5;
     margin-bottom: 8;
 }
+
+#BackButton{
+    margin-left: 16;
+    margin-right: 16;
+    margin-bottom: 8;
+    color: black;
+    font-size: 16;
+}
+
+#AnimalTitle {
+    color: #172A3A;
+    font-size: 32;
+    margin-bottom: 40;
+}

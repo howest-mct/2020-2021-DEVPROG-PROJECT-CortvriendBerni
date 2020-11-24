@@ -1,9 +1,58 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DPProject.Views.AnimalDetail" NavigationPage.HasNavigationBar="false">
 
-    <ContentPage.Content>
-         <StackLayout StyleId="Flex" VerticalOptions="Center">
-            <Label Text="" x:Name="AnimalName" />
+    <ContentPage.Resources>
+        <StyleSheet Source="../../Assets/styles.css" />
+    </ContentPage.Resources>
+
+    <ContentPage.BackgroundColor>
+    <Color>#EFFAFF</Color>
+    </ContentPage.BackgroundColor>
+    
+    <StackLayout StyleId="Flex" VerticalOptions="Center">
+        <Label Text="" x:Name="AnimalName" StyleId="AnimalTitle" HorizontalOptions="Center" />
+
+        <StackLayout>
+        <Image x:Name="AnimalImage" Source="{Binding Image}" WidthRequest="125" HeightRequest="125"></Image>
         </StackLayout>
-    </ContentPage.Content>
+
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Status:"/>
+                    <Span Text="" x:Name="AnimalStatus" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Population:"/>
+                    <Span Text="" x:Name="AnimalPopulation" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Location:"/>
+                    <Span Text="" x:Name="AnimalLocation" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Habitat:"/>
+                    <Span Text="" x:Name="AnimalHabitat" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Button x:Name="btnNavBack" Text="&lt; &lt; GO BACK" Clicked="btnNavBack_Clicked" StyleId="BackButton" VerticalOptions="EndAndExpand" BackgroundColor="#172A3A" TextColor="#EFFAFF" Opacity="0.8"/>
+    </StackLayout>
+    
 </ContentPage>

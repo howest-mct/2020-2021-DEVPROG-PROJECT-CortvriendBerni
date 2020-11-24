@@ -46,28 +46,22 @@ namespace DPProject.Views
 
         }
 
+        private void btnNavBack_Clicked(object sender, EventArgs e)
+        {
+            GoBack();
+        }
+
+        private void GoBack()
+        {
+            Navigation.PopAsync();
+        }
+
 
         //public Animal animal { get; set; }
-
-        //private void btnNavBack_Clicked(object sender, EventArgs e)
-        //{
-        //    GoBack();
-        //}
-
-        //private void GoBack()
-        //{
-        //    Navigation.PopAsync();
-        //}
 
         //private void FreshDigimon_Clicked(object sender, EventArgs e)
         //{
         //    NavigateToFreshImage();
-        //}
-
-        //private void NavigateToFreshImage()
-        //{
-        //    Navigation.PushAsync(new FreshImage(digimon));
-
         //}
     }
 }
