@@ -22,6 +22,9 @@ namespace DPProject.Models
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
 
+        [JsonProperty(PropertyName = "scientific_name")]
+        public string ScientificName { get; set; }
+
         [JsonProperty(PropertyName = "status")]
         public string Status { get; set; }
 
@@ -36,28 +39,6 @@ namespace DPProject.Models
 
         [JsonProperty(PropertyName = "image")]
         public Image Image { get; set; }
-
-        //public string Image { get; set; }
-
-        //[JsonExtensionData]
-        //private Dictionary<string, JToken> _extraJsonData = new Dictionary<string, JToken>();
-
-        //[OnDeserialized]
-        //private void ProcessExtraJsonData(StreamingContext context)
-        //{
-        //    JToken prefsData = (JToken)_extraJsonData["image"];
-        //    Image = "http://www.bloowatch.org" + (string)prefsData.SelectToken("url");
-        //}
-
-        //public ImageSource ImageSrc
-        //{
-        //    get
-        //    {
-        //        return ImageSource.FromStream(() => new HttpClient().GetStreamAsync(Image).Result);
-        //    }
-        //}
-
-
     }
 
     public class Image

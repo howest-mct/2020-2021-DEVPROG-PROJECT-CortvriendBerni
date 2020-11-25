@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DPProject.Views.AnimalExtraDetail" NavigationPage.HasNavigationBar="false">
+
+    <ContentPage.Resources>
+        <StyleSheet Source="../../Assets/styles.css" />
+    </ContentPage.Resources>
+
+    <ContentPage.BackgroundColor>
+    <Color>#EFFAFF</Color>
+    </ContentPage.BackgroundColor>
+            
+    <StackLayout StyleId="Flex" VerticalOptions="Center">
+        <Label Text="" x:Name="AnimalName" StyleId="AnimalTitle" HorizontalOptions="Center" />
+
+        <StackLayout>
+            <Image x:Name="AnimalImage" Source="{Binding Image}" WidthRequest="125" HeightRequest="125" Margin="0,0,0, 40"></Image>
+        </StackLayout>
+
+        <Label HorizontalOptions="CenterAndExpand" Margin="0,0,0,8">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Scientific Name: " StyleId="Onderwerp" FontSize="16" FontAttributes="Bold"/>
+                    <Span Text="" x:Name="AnimalScientificName" FontSize="16" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label HorizontalOptions="CenterAndExpand" Margin="0,0,0,40">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Description: " StyleId="Onderwerp" FontSize="16" FontAttributes="Bold"/>
+                    <Span Text="" x:Name="AnimalDescription" FontSize="16" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <StackLayout VerticalOptions="End">
+            <Button x:Name="btnNavBack" Text="GO BACK" Clicked="btnNavBack_Clicked" StyleId="BackButton" VerticalOptions="End" BackgroundColor="#172A3A" TextColor="#EFFAFF" Opacity="0.8"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

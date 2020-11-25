@@ -34,5 +34,9 @@ namespace DPProject.Views
         {
             Navigation.PopAsync();
         }
+
+        void btnMoreInfo_Clicked(System.Object sender, System.EventArgs e)
+        {
+        }
     }
 }

@@ -53,7 +53,7 @@
         </Label>
 
         <StackLayout VerticalOptions="End">
-            <Button x:Name="btnLike" Text="Like" StyleId="BackButton" VerticalOptions="End" BackgroundColor="#65A281" TextColor="#EFFAFF" Opacity="1"/>
+            <Button x:Name="btnMoreInfo" Clicked="btnMoreInfo_Clicked" Text="Show more info" StyleId="BackButton" VerticalOptions="End" BackgroundColor="#65A281" TextColor="#EFFAFF" Opacity="1"/>
         </StackLayout>
 
         <StackLayout VerticalOptions="End">
