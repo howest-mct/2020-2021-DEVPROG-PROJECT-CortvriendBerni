@@ -5,7 +5,7 @@
 
 #Title {
     color: black;
-    font-size: 20;
+    font-size: 24;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
@@ -33,4 +33,16 @@
     color: #172A3A;
     font-size: 32;
     margin-bottom: 40;
+}
+
+#Welcome{
+    font-size: 16;
+    margin-left: 24;
+    margin-right: 24;
+    margin-bottom: 32;
+    text-align: center;
+}
+
+#Description {
+    text-align: center;
 }

@@ -37,6 +37,7 @@ namespace DPProject.Views
 
         void btnMoreInfo_Clicked(System.Object sender, System.EventArgs e)
         {
+            Navigation.PushAsync(new AnimalExtraDetail(animal));     
         }
     }
 }
