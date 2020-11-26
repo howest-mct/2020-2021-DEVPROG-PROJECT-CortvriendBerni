@@ -13,7 +13,8 @@
         <StackLayout StyleId="Flex" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
             <Label Text="Endangered Animals" StyleId="Title" />
             <Label HorizontalOptions="Center" StyleId="Welcome" Text="Welcome to the app where you can check the recent and most Endangered Animals on our planet. Check them out by clicking the button below" />
-            <Button Text="Check Animals" StyleId="Button" Clicked="List_Animals" BackgroundColor="#172A3A" TextColor="#EFFAFF" Opacity="0.8"/>
+            <Button Text="Endangered Animals" StyleId="Button" Clicked="List_Animals" BackgroundColor="#172A3A" TextColor="#EFFAFF" Opacity="0.8"/>
+            <Button Text="Your Favorites" StyleId="Button" Clicked="List_Favorites" BackgroundColor="#172A3A" TextColor="#EFFAFF" Opacity="0.8"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

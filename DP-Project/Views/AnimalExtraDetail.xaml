@@ -30,7 +30,7 @@
         <Label HorizontalOptions="CenterAndExpand" Margin="24,0,16,40" StyleId="Description">
             <Label.FormattedText>
                 <FormattedString>
-                    <Span Text="" x:Name="AnimalDescription" FontSize="16" />
+                    <Span Text="" x:Name="AnimalDescription" FontSize="14" />
                 </FormattedString>
             </Label.FormattedText>
         </Label>

@@ -39,6 +39,8 @@ namespace DPProject.Models
 
         [JsonProperty(PropertyName = "image")]
         public Image Image { get; set; }
+
+        public bool isFavorite { get; set; }
     }
 
     public class Image

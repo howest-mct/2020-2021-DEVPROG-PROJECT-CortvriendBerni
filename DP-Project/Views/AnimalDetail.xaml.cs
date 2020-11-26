@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using DPProject.Models;
+using DPProject.Repository;
 using Xamarin.Forms;
 
 namespace DPProject.Views
@@ -38,6 +39,12 @@ namespace DPProject.Views
         void btnMoreInfo_Clicked(System.Object sender, System.EventArgs e)
         {
             Navigation.PushAsync(new AnimalExtraDetail(animal));     
+        }
+
+        void btnLike_Clicked(System.Object sender, System.EventArgs e)
+        {
+            btnLike.Text = "Added to Favourites";
+            AnimalRepo.addToFavorite(animal);
         }
     }
 }

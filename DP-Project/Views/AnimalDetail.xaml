@@ -43,7 +43,7 @@
             </Label.FormattedText>
         </Label>
 
-        <Label HorizontalOptions="CenterAndExpand" Margin="0,0,0,40">
+        <Label HorizontalOptions="CenterAndExpand" Margin="0,0,0,0">
             <Label.FormattedText>
                 <FormattedString>
                     <Span Text="Habitat: " StyleId="Onderwerp" FontSize="16" FontAttributes="Bold"/>
@@ -52,8 +52,12 @@
             </Label.FormattedText>
         </Label>
 
+        <StackLayout Margin="0,0,0,32">
+            <Button x:Name="btnMoreInfo" Clicked="btnMoreInfo_Clicked" Text="Show more info" StyleId="MoreInfo" VerticalOptions="End" BorderColor="Transparent" BackgroundColor="Transparent"/>
+        </StackLayout>
+
         <StackLayout VerticalOptions="End">
-            <Button x:Name="btnMoreInfo" Clicked="btnMoreInfo_Clicked" Text="Show more info" StyleId="BackButton" VerticalOptions="End" BackgroundColor="#65A281" TextColor="#EFFAFF" Opacity="1"/>
+            <Button x:Name="btnLike" Text="Like" Clicked="btnLike_Clicked" StyleId="BackButton" VerticalOptions="End" BackgroundColor="#65A281" TextColor="#EFFAFF" Opacity="1.0"/>
         </StackLayout>
 
         <StackLayout VerticalOptions="End">

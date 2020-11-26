@@ -10,6 +10,8 @@ namespace DPProject.Repository
 {
     public static class AnimalRepo
     {
+        public static List<AnimalSpecy> favorites = new List<AnimalSpecy>();
+
         private static HttpClient GetHttpClient()
         {
             HttpClient client = new HttpClient();
@@ -35,6 +37,11 @@ namespace DPProject.Repository
                     throw ex;
                 }
             }
+        }
+
+        public static void addToFavorite(AnimalSpecy favorite)
+        {
+            favorites.Add(favorite);
         }
     }
 }
