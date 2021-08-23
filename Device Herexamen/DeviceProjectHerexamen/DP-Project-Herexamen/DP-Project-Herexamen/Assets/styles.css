@@ -1,0 +1,66 @@
+﻿#Flex {
+    display: flex;
+    align-items: center;
+}
+
+#Title {
+    color: black;
+    font-size: 24;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 16;
+}
+
+#Title2 {
+    color: #172A3A;
+    font-size: 20;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 16;
+    margin-top: 16;
+}
+
+#Button {
+    color: black;
+    margin-right: 80;
+    margin-left: 80;
+    font-size: 16;
+    border-radius: 5;
+    margin-bottom: 8;
+}
+
+#Button2 {
+    color: black;
+    font-size: 16;
+    border-radius: 5;
+    margin-bottom: 8;
+}
+
+
+#BackButton {
+    margin-left: 16;
+    margin-right: 16;
+    margin-bottom: 8;
+    color: black;
+    font-size: 16;
+}
+
+#AnimalTitle {
+    color: #172A3A;
+    font-size: 32;
+    margin-bottom: 24;
+}
+
+#Welcome {
+    font-size: 16;
+    margin-left: 24;
+    margin-right: 24;
+    margin-bottom: 32;
+    text-align: center;
+}
+
+#Description {
+    text-align: center;
+}

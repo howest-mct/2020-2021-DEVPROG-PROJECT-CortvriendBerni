@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DPProjectHerexamen.Views.ElephantDetail" NavigationPage.HasNavigationBar="false">
+
+    <ContentPage.Resources>
+        <StyleSheet Source="../../Assets/styles.css" />
+    </ContentPage.Resources>
+
+    <ContentPage.BackgroundColor>
+    <Color>#EFFAFF</Color>
+    </ContentPage.BackgroundColor>
+            
+    <StackLayout StyleId="Flex" VerticalOptions="Center">
+        <Label Text="" x:Name="ElephantName" StyleId="AnimalTitle" HorizontalOptions="Center" />
+
+        <StackLayout>
+            <Image x:Name="ElephantImage" Source="{Binding Image}" WidthRequest="175" HeightRequest="175" Margin="0,0,0, 40"></Image>
+        </StackLayout>
+
+        <Label HorizontalOptions="CenterAndExpand" Margin="0,0,0,8">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Affiliation: " StyleId="Onderwerp" FontSize="16" FontAttributes="Bold"/>
+                    <Span Text="" x:Name="ElephantAffiliation" FontSize="16" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label HorizontalOptions="CenterAndExpand" Margin="0,0,0,8">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Species: " StyleId="Onderwerp" FontSize="16" FontAttributes="Bold"/>
+                    <Span Text="" x:Name="ElephantSpecies" FontSize="16" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label HorizontalOptions="CenterAndExpand" Margin="0,0,0,8">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Sex: " StyleId="Onderwerp" FontSize="16" FontAttributes="Bold"/>
+                    <Span Text="" x:Name="ElephantSex" FontSize="16" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label HorizontalOptions="CenterAndExpand" Margin="24,0,24,0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Fictional: " StyleId="Onderwerp" FontSize="16" FontAttributes="Bold"/>
+                    <Span Text="" x:Name="ElephantFictional" FontSize="16" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <StackLayout Margin="0,0,0,32">
+            <Button x:Name="btnMoreInfo" Clicked="btnMoreInfo_Clicked" Text="Show more info" StyleId="MoreInfo" VerticalOptions="End" BorderColor="Transparent" BackgroundColor="Transparent"/>
+        </StackLayout>
+
+        <StackLayout VerticalOptions="End">
+            <Button x:Name="btnLike" Text="Add to favourites" Clicked="btnLike_Clicked" StyleId="BackButton" VerticalOptions="End" BackgroundColor="#65A281" TextColor="#EFFAFF" Opacity="1.0"/>
+        </StackLayout>
+
+        <StackLayout VerticalOptions="End">
+            <Button x:Name="btnNavBack" Text="GO BACK" Clicked="btnNavBack_Clicked" StyleId="BackButton" VerticalOptions="End" BackgroundColor="#172A3A" TextColor="#EFFAFF" Opacity="0.8"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

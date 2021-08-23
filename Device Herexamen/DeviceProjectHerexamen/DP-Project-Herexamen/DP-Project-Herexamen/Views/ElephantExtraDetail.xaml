@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DPProjectHerexamen.Views.ElephantExtraDetail" NavigationPage.HasNavigationBar="false">
+
+    <ContentPage.Resources>
+        <StyleSheet Source="../../Assets/styles.css" />
+    </ContentPage.Resources>
+
+    <ContentPage.BackgroundColor>
+    <Color>#EFFAFF</Color>
+    </ContentPage.BackgroundColor>
+            
+    <StackLayout StyleId="Flex" VerticalOptions="Center">
+        <Label Text="" x:Name="ElephantName" StyleId="AnimalTitle" HorizontalOptions="Center" />
+
+        <StackLayout>
+            <Image x:Name="ElephantImage" Source="{Binding Image}" WidthRequest="125" HeightRequest="125" Margin="0,0,0, 40"></Image>
+        </StackLayout>
+
+        <Label HorizontalOptions="CenterAndExpand" Margin="0,0,0,8">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Date Of Birth: " StyleId="Onderwerp" FontSize="16" FontAttributes="Bold"/>
+                    <Span Text="" x:Name="ElephantDOB" FontSize="16" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label HorizontalOptions="CenterAndExpand" Margin="0,0,0,8">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Date Of Death: " StyleId="Onderwerp" FontSize="16" FontAttributes="Bold"/>
+                    <Span Text="" x:Name="ElephantDOD" FontSize="16" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label Text="Description:  &#10;" StyleId="Onderwerp" FontSize="16" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+
+        <Label HorizontalOptions="CenterAndExpand" Margin="24,0,16,40" StyleId="Description">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="" x:Name="ElephantDescription" FontSize="14" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <StackLayout VerticalOptions="End">
+            <Button x:Name="btnNavBack" Text="GO BACK" Clicked="btnNavBack_Clicked" StyleId="BackButton" VerticalOptions="End" BackgroundColor="#172A3A" TextColor="#EFFAFF" Opacity="0.8"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

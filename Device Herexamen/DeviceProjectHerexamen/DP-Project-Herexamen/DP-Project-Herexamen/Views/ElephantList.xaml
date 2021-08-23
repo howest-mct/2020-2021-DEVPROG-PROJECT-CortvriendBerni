@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DPProjectHerexamen.Views.ElephantList" NavigationPage.HasNavigationBar="false">
+
+    <ContentPage.Resources>
+        <StyleSheet Source="../../Assets/styles.css" />
+    </ContentPage.Resources>
+
+    <ContentPage.BackgroundColor>
+    <Color>#EFFAFF</Color>
+    </ContentPage.BackgroundColor>
+
+    <StackLayout>
+         <Label Text="Elephant species" StyleId="Title2"/>
+         <SearchBar x:Name="Search1" TextChanged="SearchBar_TextChanged" Placeholder="Search" /> 
+         <ListView x:Name="lvwElephant" RowHeight="100" SeparatorVisibility="Default" HasUnevenRows="true" SeparatorColor="#74B3CE">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout VerticalOptions="Center" Orientation="Horizontal"> 
+                            <Image x:Name="ElephantImage" Source="{Binding Image}" WidthRequest="100" HeightRequest="100" Margin="50,10,0,10"></Image>      
+                            <Button x:Name="elephantButton" Clicked="elephantButton_Clicked" StyleId="Button2" Text="{Binding Name}" BackgroundColor="#EFFAFF" Margin="0,10,0, 0" TextColor="#172A3A" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="btnNavBack" Text="GO BACK HOME" Clicked="btnNavBack_Clicked" StyleId="BackButton" VerticalOptions="EndAndExpand" BackgroundColor="#172A3A" TextColor="#EFFAFF" Opacity="0.8"/>
+    </StackLayout>
+
+</ContentPage>

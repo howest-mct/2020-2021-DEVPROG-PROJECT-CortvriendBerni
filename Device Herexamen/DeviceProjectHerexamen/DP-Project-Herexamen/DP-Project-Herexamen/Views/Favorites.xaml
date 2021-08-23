@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DPProjectHerexamen.Views.Favorites" NavigationPage.HasNavigationBar="false">
+
+    <ContentPage.Resources>
+        <StyleSheet Source="../../Assets/styles.css" />
+    </ContentPage.Resources>
+
+    <ContentPage.BackgroundColor>
+    <Color>#EFFAFF</Color>
+    </ContentPage.BackgroundColor>
+            <StackLayout>
+                <Label Text="Your Favourites" StyleId="Title2"/>
+                <RefreshView x:Name="myRefreshView" Refreshing="RefreshView_Refreshing">
+                     <ListView x:Name="lvwElephants" RowHeight="100" SeparatorVisibility="Default" HasUnevenRows="true" SeparatorColor="#74B3CE">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout VerticalOptions="CenterAndExpand" Orientation="Horizontal">
+                                        <Image x:Name="ElephantImage" Source="{Binding Image}" WidthRequest="100" HeightRequest="100" Margin="50,10,0,0"></Image>      
+                                        <Button x:Name="animalbutton" Clicked="animalbutton_Clicked" StyleId="Button" Margin="0,10,0,0" Text="{Binding Name}" BackgroundColor="#EFFAFF" TextColor="#172A3A" HorizontalOptions="CenterAndExpand"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </RefreshView>
+                <Button x:Name="btnNavBack" Text="GO BACK HOME" Clicked="btnNavBack_Clicked" StyleId="BackButton" VerticalOptions="EndAndExpand" BackgroundColor="#172A3A" TextColor="#EFFAFF" Opacity="0.8"/>
+            </StackLayout>
+</ContentPage>

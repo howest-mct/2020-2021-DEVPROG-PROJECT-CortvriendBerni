@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DP_Project_Herexamen.MainPage"  NavigationPage.HasNavigationBar="false">
+
+    <ContentPage.Resources>
+        <StyleSheet Source="../Assets/styles.css" />
+    </ContentPage.Resources>
+
+    <ContentPage.BackgroundColor>
+    <Color>#EFFAFF</Color>
+    </ContentPage.BackgroundColor>
+
+    <ContentPage.Content>
+        <StackLayout StyleId="Flex" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+            <Image Source="OlifantFotoEdit.png" HeightRequest="120" BackgroundColor = "Transparent"/>
+            <Label Text="The Elephant history" StyleId="Title" />
+            <Label HorizontalOptions="Center" StyleId="Welcome" Text="Welcome to the app where you can find all the most popular Elephants that have lived on planet Earth." />
+            <Button Text="All Elephants" StyleId="Button" Clicked="List_Elephants" BackgroundColor="#172A3A" TextColor="#EFFAFF" Opacity="0.8"/>
+            <Button Text="Elephant Species" StyleId="Button" Clicked="List_Filter" BackgroundColor="#172A3A" TextColor="#EFFAFF" Opacity="0.8"/>
+            <Button Text="Your Favorites" StyleId="Button" Clicked="List_Favorites" BackgroundColor="#172A3A" TextColor="#EFFAFF" Opacity="0.8"/>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
